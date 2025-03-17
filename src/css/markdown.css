@@ -1,0 +1,120 @@
+.markdown {
+    h1 {
+      @apply text-6xl leading-[4.5rem] mb-6 drop-shadow-heading bg-gradient-to-br from-blue to-primary-pop text-transparent bg-clip-text;
+    }
+  
+    h2 {
+      @apply text-3xl mt-12;
+    }
+  
+    h3 {
+      @apply text-2xl;
+    }
+  
+    h4 {
+      @apply text-xl !text-[#988da9] !mb-0;
+    }
+  
+    h5 {
+      @apply text-lg;
+    }
+  
+    h6 {
+      @apply text-base;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-bold;
+    }
+  
+    h2, h3, h4, h5, h6 {
+      @apply mb-3 drop-shadow-md text-secondary;
+    }
+  
+    blockquote {
+      @apply text-base italic border-l-4 border-primary mb-6 bg-neutral-900 pt-5 pb-5 pl-18 pr-4;
+  
+      p {
+        @apply text-xl font-semibold italic relative mb-0 isolate;
+  
+        &::before {
+          content: open-quote;
+          @apply absolute text-[5rem] font-serif font-bold opacity-10 top-[-1.75rem] left-[-3.5rem];
+        }
+      }
+    }
+  
+    p {
+      @apply text-base mb-6;
+    }
+  
+    a {
+      @apply text-blue-500;
+    }
+  
+    ul {
+      @apply list-disc;
+    }
+  
+    ol {
+      @apply list-decimal;
+    }
+  
+    ul, ol {
+      @apply mb-6 pl-8;
+    }
+  
+    li {
+      @apply text-base text-white/70 mb-2;
+
+      &::marker {
+        @apply text-primary-hover;
+      }
+
+      > ul {
+        @apply mt-2;
+      }
+
+      > p {
+        @apply mb-0;
+      }
+
+      > strong {
+        @apply text-white;
+      }
+    }
+    
+    blockquote {
+      @apply text-base italic;
+    }
+
+    code {
+      &.sp-pre-placeholder {
+        @apply text-base font-mono;
+      }
+
+      &:not(.sp-pre-placeholder) {
+        @apply text-sm text-white p-1 rounded bg-[#171717] font-mono;
+      }
+    }
+
+    pre {
+      @apply text-base font-mono;
+
+      &:not(.sp-cm) {
+        @apply mb-8;
+      }
+    }
+  
+    table {
+      @apply text-base;
+    }
+  
+    th {
+      @apply text-base;
+    }
+  
+    td {
+      @apply text-base;
+    }
+  }
