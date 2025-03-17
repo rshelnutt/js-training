@@ -15,13 +15,14 @@ interface SideNavLinkProps {
 }
 
 const SideNavLink = ({ title, className, route, ...rest }: SideNavLinkProps) => {
-  const location = useRouterState({ select: (s) => s.location })
+  const router = useRouterState()
+  const pathname = router.location.pathname
   let routeTo =  route.to
 
   // If routeTo ends with /, remove it
   if (routeTo?.length > 1 && routeTo.endsWith("/")) routeTo = route.to?.slice(0, -1)
 
-  const isActive = (routeTo !== '/' && location.pathname.includes(routeTo)) || location.pathname === routeTo
+  const isActive = (routeTo !== '/' && pathname.includes(routeTo)) || pathname === routeTo
 
   const classes = [
     "flex flex-nowrap items-center gap-2",

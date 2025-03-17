@@ -2,7 +2,6 @@ import type { SandpackProps } from "@codesandbox/sandpack-react"
 import {
   SandpackProvider,
   SandpackLayout,
-  SandpackPreview,
   SandpackCodeEditor,
 } from "@codesandbox/sandpack-react"
 import { amethyst } from "@codesandbox/sandpack-themes"
