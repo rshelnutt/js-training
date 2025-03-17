@@ -2,7 +2,7 @@
 
 The Interface Segregation Principle is the fourth principle in the SOLID design principles. The rough translation for functional programming is:
 
-> Components shouldn’t depend on props that they don’t use.
+> Components shouldn't depend on props that they don't use.
 
 In other words, it's better to have multiple, specific interfaces rather than one general-purpose interface. This principle helps prevent components from being burdened with dependencies they don't need.
 
@@ -78,7 +78,7 @@ const SimpleUsage = () => (
   <Card
     title="Welcome"
     description="This is a simple card"
-    // This data can still be passed, even if not being used
+    // These values are still required, even if not being used
     subtitle={null}
     imageUrl={null}
     imageAlt={null}
