@@ -88,21 +88,8 @@ const UserList = ({ users, loading, error }:{ users: User[], loading: boolean, e
   );
 };
 ```
-Consumed by the parent component, which calls the data:
 
-```tsx
-[[ Good Example - UserListContainer.tsx ]]
-
-import useUsers from "./composables/useUsers"
-
-const UserListContainer = () => {
-  const { users, loading, error } = useUsers(); // Uses the custom hook to call data
-  
-  return <UserList users={users} loading={loading} error={error} />; // Passes data as props
-};
-```
-
-From a custom `useUsers()` hook, where the data fetching logic has ben abstracted into:
+We set up a custom `useUsers()` hook, where the data fetching logic has been abstracted into:
 
 ```tsx
 [[ Good Example - useUsers.tsx ]]
@@ -130,6 +117,22 @@ const useUsers = () => {
 }
 
 export default useUsers
+```
+
+The custom hook is then consumed by the parent component, which calls the data, and displays it using the `UserList` component:
+
+```tsx
+[[ Good Example - UserListContainer.tsx ]]
+
+import useUsers from "./composables/useUsers"
+
+const UserListContainer = () => {
+  const { users, loading, error } = useUsers(); // Uses the custom hook to call data
+  
+  return <UserList users={users} loading={loading} error={error} />; // Passes data as props
+};
+
+  export default UserListContainer;
 ```
 
 ### Improvements in this implementation:
